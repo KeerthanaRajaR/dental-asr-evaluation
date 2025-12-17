@@ -1,0 +1,53 @@
+Doctor: Good morning, this is Dr. Ananya, dentist at SmileCare Clinic. How are you feeling today?
+
+Patient: Good morning doctor. I’m a bit nervous. I’ve been having pain on the left lower jaw for almost two weeks now.
+
+Doctor: That’s okay, we’ll go step by step. Is the pain sharp or dull?
+
+Patient: It’s a dull pain most of the time, but when I drink cold water it becomes very sharp.
+
+Doctor: Understood. Any swelling or fever?
+
+Patient: No fever, but slight swelling near the left molar area.
+
+Doctor: I’m going to examine your oral cavity now. Please open your mouth slowly.
+
+Patient: Okay doctor.
+
+Doctor: I see a deep cavity in the lower left first molar. The tooth appears sensitive to percussion. This could indicate pulpitis.
+
+Patient: Is that serious?
+
+Doctor: It can be if untreated. We may need to do a root canal treatment. Before that, I’ll take an X-ray.
+
+Patient: Will it hurt?
+
+Doctor: You may feel mild discomfort, but no pain. We’ll use local anesthesia, lidocaine 2 percent.
+
+Patient: I’m allergic to penicillin. Is that okay?
+
+Doctor: Yes, that’s important information. I’ll avoid prescribing amoxicillin. If needed, we can use clindamycin 300 milligrams, three times a day.
+
+Patient: Okay.
+
+Doctor: The X-ray shows infection near the root apex. We’ll schedule the root canal on the right side of your mouth next visit.
+
+Patient: I thought it was the left?
+
+Doctor: Sorry, correction — left lower molar. Thank you for catching that.
+
+Patient: How long will the procedure take?
+
+Doctor: About 60 to 90 minutes. After the procedure, avoid chewing on the left side for at least 24 hours.
+
+Patient: Will I need painkillers?
+
+Doctor: You can take ibuprofen 400 mg every 8 hours if needed. Do not exceed 1200 mg per day.
+
+Patient: Alright.
+
+Doctor: Also, there are no signs of gum infection or abscess. No signs of systemic infection.
+
+Patient: That’s a relief.
+
+Doctor: I’ll see you next week. If pain worsens, contact us immediately.
