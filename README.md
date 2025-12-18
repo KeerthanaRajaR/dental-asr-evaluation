@@ -1,33 +1,57 @@
-# Dental ASR Evaluation using Whisper v3 Large Turbo
+# Dental ASR Evaluation Pipeline
 
 ## Overview
-This project evaluates the performance of Whisper v3 Large Turbo on long-form dental appointment conversations.
-The evaluation focuses on both standard ASR metrics and clinical safety-critical metrics.
+This project implements an end-to-end evaluation pipeline for Automatic Speech Recognition (ASR) using **Whisper v3 Large Turbo (via Groq)**. The evaluation is performed on realistic **dental doctor–patient conversations**, with a focus on transcription accuracy as well as **clinical safety–critical metrics**.
 
-## Workflow
-1. Create realistic dental doctor–patient conversations (ground truth)
-2. Convert text to audio using pyttsx3
-3. Transcribe audio using Whisper v3 Large Turbo via Groq
+The objective is to evaluate how well an ASR system preserves medically important information such as terminology, medications, numeric values, laterality, negation, and overall clinical coherence in long-form conversations.
+
+---
+
+## Task Workflow
+1. Create realistic dental doctor–patient conversations as ground truth
+2. Convert reference text into audio using Text-to-Speech
+3. Transcribe audio using Whisper v3 Large Turbo
 4. Compare ASR output with reference transcripts
-5. Compute evaluation metrics
+5. Compute standard ASR metrics and clinical safety metrics
+6. Automate the workflow for multiple conversations
 
-## Metrics Implemented
-- Word Error Rate (WER)
-- Character Error Rate (CER)
-- Sentence Error Rate (SER)
-- Medical Terminology Accuracy
-- Medication Accuracy
-- Numeric Accuracy
-- Laterality Accuracy
-- Negation Accuracy
+---
 
-## Technologies Used
-- Python
-- pyttsx3 (Text-to-Speech)
-- Whisper v3 Large Turbo (Groq)
-- jiwer
-- Regex
+## Implementation Summary
+- Reference conversations are manually curated and stored as text files
+- Audio is generated using `pyttsx3`
+- Long audio is handled using chunked transcription
+- ASR is performed using Whisper v3 Large Turbo
+- Metrics are computed by comparing ASR output with reference text
+- The entire pipeline is automated using a single execution script
 
-## How to Run
-```bash
-python run_all.py
+---
+
+## Project Structure
+
+dental-asr-evaluation/
+│
+├── conversations/ # Ground truth reference conversations
+│ ├── convo1_reference.txt
+│ └── convo2_reference.txt
+│
+├── audio/ # Generated audio files (ignored in Git)
+│
+├── transcripts/ # Whisper ASR output transcripts
+│ ├── convo1_whisper.txt
+│ └── convo2_whisper.txt
+│
+├── metric/ # Metric implementations
+│ ├── wer_cer_ser.py
+│ ├── medical_terms.py
+│ ├── medication_accuracy.py
+│ ├── numeric_accuracy.py
+│ ├── laterality_negation.py
+│ ├── document_structure.py
+│ └── semantic_clinical.py
+│
+├── transcribe_groq.py # Audio chunking & transcription utilities
+├── run_all.py # One-click automation script
+├── requirements.txt # Python dependencies
+├── .gitignore # Ignored files and folders
+└── README.md # Project documentation
