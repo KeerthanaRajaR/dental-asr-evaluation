@@ -61,29 +61,5 @@ dental-asr-evaluation/
 ```bash
 python run_all.py
 
-## Structure of the Project
-dental-asr-evaluation/
-│
-├── conversations/
-│   ├── convo1_reference.txt
-│   └── convo2_reference.txt
-│
-├── audio/
-│
-├── transcripts/
-│   ├── convo1_whisper.txt
-│   └── convo2_whisper.txt
-│
-├── metric/
-│   ├── wer_cer_ser.py
-│   ├── medical_terms.py
-│   ├── medication_accuracy.py
-│   ├── numeric_accuracy.py
-│   └── laterality_negation.py
-│
-├── transcribe_utils.py
-├── run_all.py
-├── requirements.txt
-├── .gitignore
-└── README.md
+
 
