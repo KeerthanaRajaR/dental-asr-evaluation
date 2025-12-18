@@ -54,7 +54,7 @@ dental-asr-evaluation/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-=======
+
 ## How to Run
 ```bash
 python run_all.py
