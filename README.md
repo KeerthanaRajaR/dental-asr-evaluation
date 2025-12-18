@@ -30,6 +30,7 @@ The objective is to evaluate how well an ASR system preserves medically importan
 
 ## Project Structure
 
+```text
 dental-asr-evaluation/
 │
 ├── conversations/
@@ -54,6 +55,7 @@ dental-asr-evaluation/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+```
 
 ## How to Run
 ```bash
