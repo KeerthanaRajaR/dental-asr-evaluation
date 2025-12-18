@@ -32,30 +32,28 @@ The objective is to evaluate how well an ASR system preserves medically importan
 
 dental-asr-evaluation/
 │
-├── conversations/ # Ground truth reference conversations
-│ ├── convo1_reference.txt
-│ └── convo2_reference.txt
+├── conversations/
+│   ├── convo1_reference.txt
+│   └── convo2_reference.txt
 │
-├── audio/ # Generated audio files (ignored in Git)
+├── audio/
 │
-├── transcripts/ # Whisper ASR output transcripts
-│ ├── convo1_whisper.txt
-│ └── convo2_whisper.txt
+├── transcripts/
+│   ├── convo1_whisper.txt
+│   └── convo2_whisper.txt
 │
-├── metric/ # Metric implementations
-│ ├── wer_cer_ser.py
-│ ├── medical_terms.py
-│ ├── medication_accuracy.py
-│ ├── numeric_accuracy.py
-│ ├── laterality_negation.py
-│ ├── document_structure.py
-│ └── semantic_clinical.py
+├── metric/
+│   ├── wer_cer_ser.py
+│   ├── medical_terms.py
+│   ├── medication_accuracy.py
+│   ├── numeric_accuracy.py
+│   └── laterality_negation.py
 │
-├── transcribe_groq.py # Audio chunking & transcription utilities
-├── run_all.py # One-click automation script
-├── requirements.txt # Python dependencies
-├── .gitignore # Ignored files and folders
-└── README.md # Project documentation
+├── transcribe_utils.py
+├── run_all.py
+├── requirements.txt
+├── .gitignore
+└── README.md
 =======
 ## How to Run
 ```bash
