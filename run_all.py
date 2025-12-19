@@ -16,7 +16,7 @@ from metric.semantic_clinical import clinical_coherence_score, ner_f1_score
 from metric.system_metrics import *
 from metric.weighted_error_rate import *
 from metric.evaluation_methodology import *
-
+from metric.tools_and_implementation import *
 
 
 # ---------------- CONFIG ----------------
@@ -80,6 +80,13 @@ for cid in [1, 2]:
     stratified_evaluation(cid)
     statistical_significance(cid)
     drift_monitoring_score(cid)
+
+    asr_library_consistency(cid)
+    medical_nlp_coverage(cid)
+    string_alignment_score(cid)
+    error_distribution(cid)
+    cicd_readiness(cid)
+
 
     print("-" * 50)
 
