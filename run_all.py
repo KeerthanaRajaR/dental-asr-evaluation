@@ -14,6 +14,10 @@ from metric import (
 from metric.document_structure import section_heading_accuracy, punctuation_accuracy
 from metric.semantic_clinical import clinical_coherence_score, ner_f1_score
 from metric.system_metrics import *
+from metric.weighted_error_rate import *
+from metric.evaluation_methodology import *
+
+
 
 # ---------------- CONFIG ----------------
 FAST_MODE = True   # Set False if you want to re-run transcription
@@ -23,7 +27,7 @@ engine = pyttsx3.init()
 engine.setProperty("rate", 170)
 
 for cid in [1, 2]:
-    print(f"\n🚀 Conversation {cid}")
+    print(f"\n Conversation {cid}")
 
     transcript_path = Path(f"transcripts/convo{cid}_whisper.txt")
     audio_path = Path(f"audio/convo{cid}.wav")
@@ -31,9 +35,9 @@ for cid in [1, 2]:
 
     # -------- Transcription Step --------
     if FAST_MODE and transcript_path.exists():
-        print("⚡ FAST MODE: Using existing transcript")
+        print(" FAST MODE: Using existing transcript")
     else:
-        print("🔊 Generating audio & transcription")
+        print(" Generating audio & transcription")
 
         text = ref_path.read_text(encoding="utf-8")
 
@@ -43,7 +47,7 @@ for cid in [1, 2]:
         transcribe(str(audio_path), str(transcript_path))
 
     # -------- Metrics --------
-    print("📊 METRICS")
+    print(" METRICS")
 
     wer_cer_ser.run(cid)
     medical_terms.run(cid)
@@ -66,10 +70,21 @@ for cid in [1, 2]:
     fp_fn_tradeoff(cid)
     accuracy_speed_tradeoff(cid)
 
+    weighted_error_rate(cid)
+    error_weight_distribution(cid)
+    clinical_severity_score(cid)
+    clinical_validation_readiness(cid)
+
+    reference_quality_score(cid)
+    inter_annotator_agreement(cid)
+    stratified_evaluation(cid)
+    statistical_significance(cid)
+    drift_monitoring_score(cid)
+
     print("-" * 50)
 
 # -------- System-level Metrics (run once) --------
 realtime_vs_batch()
 clinical_latency_check()
 
-print("\n🎉 ALL METRICS FOR ALL CONVERSATIONS COMPLETED")
+print("\n ALL METRICS FOR ALL CONVERSATIONS COMPLETED")
