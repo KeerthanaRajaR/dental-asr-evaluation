@@ -17,6 +17,7 @@ from metric.system_metrics import *
 from metric.weighted_error_rate import *
 from metric.evaluation_methodology import *
 from metric.tools_and_implementation import *
+from metric.regulatory_metrics import *
 
 
 # ---------------- CONFIG ----------------
@@ -86,6 +87,12 @@ for cid in [1, 2]:
     string_alignment_score(cid)
     error_distribution(cid)
     cicd_readiness(cid)
+
+    phi_exposure_risk(cid)
+    clinical_safety_stability(cid)
+    transcription_standards_compliance(cid)
+    documentation_clarity(cid)
+
 
 
     print("-" * 50)
